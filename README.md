@@ -8,38 +8,35 @@
 
 [文档](http://github.com/XiaoMi/soar/tree/master/doc) | [FAQ](http://github.com/XiaoMi/soar/blob/master/doc/FAQ.md) | [变更记录](http://github.com/XiaoMi/soar/blob/master/CHANGES.md) | [路线图](http://github.com/XiaoMi/soar/blob/master/doc/roadmap.md) | [English](http://github.com/XiaoMi/soar/blob/master/README_EN.md)
 
+
 ## SOAR
 
-SOAR(SQL Optimizer And Rewriter) 是一个对 SQL 进行优化和改写的自动化工具。 由小米人工智能与云平台的数据库团队开发与维护。
+SOAR (SQL Optimizer And Rewriter) is an automated tool for optimizing and rewriting SQL. It is developed and maintained by the database team of Xiaomi AI and Cloud Platform.
 
-## 功能特点
+## Features
 
-* 跨平台支持（支持 Linux, Mac 环境，Windows 环境理论上也支持，不过未全面测试）
-* 目前只支持 MySQL 语法族协议的 SQL 优化
-* 支持基于启发式算法的语句优化
-* 支持复杂查询的多列索引优化（UPDATE, INSERT, DELETE, SELECT）
-* 支持 EXPLAIN 信息丰富解读
-* 支持 SQL 指纹、压缩和美化
-* 支持同一张表多条 ALTER 请求合并
-* 支持自定义规则的 SQL 改写
+* Cross-platform support (Linux, Mac environments are supported, Windows environment is also supported in theory, but not fully tested)
+* Currently only support MySQL syntax family protocol for SQL optimization
+* Support for heuristic-based statement optimization
+* Supports multi-column index optimization for complex queries (UPDATE, INSERT, DELETE, SELECT)
+* Support for EXPLAIN information rich interpretation
+* Support SQL fingerprinting, compression and beautification
+* Support for merging multiple ALTER requests for the same table
+* Support for SQL rewriting with custom rules
 
-## 快速入门
+## Quick Start
 
-* [安装使用](http://github.com/XiaoMi/soar/blob/master/doc/install.md)
-* [体系架构](http://github.com/XiaoMi/soar/blob/master/doc/structure.md)
-* [配置文件](http://github.com/XiaoMi/soar/blob/master/doc/config.md)
-* [常用命令](http://github.com/XiaoMi/soar/blob/master/doc/cheatsheet.md)
-* [产品对比](http://github.com/XiaoMi/soar/blob/master/doc/comparison.md)
-* [路线图](http://github.com/XiaoMi/soar/blob/master/doc/roadmap.md)
+* [Installation and Use](http://github.com/XiaoMi/soar/blob/master/doc/install.md)
+* [Architecture](http://github.com/XiaoMi/soar/blob/master/doc/structure.md)
+* [Configuration Files](http://github.com/XiaoMi/soar/blob/master/doc/config.md)
+* [Common Commands](http://github.com/XiaoMi/soar/blob/master/doc/cheatsheet.md)
+* [Product Comparison](http://github.com/XiaoMi/soar/blob/master/doc/comparison.md)
+* [Roadmap](http://github.com/XiaoMi/soar/blob/master/doc/roadmap.md)
 
-## 交流与反馈
+## Communication and Feedback
 
-* 欢迎通过 Github Issues 提交问题报告与建议
-* QQ 群：779359816（未满） 758940447（已满）
-* [Gitter](https://gitter.im/xiaomi-dba/soar) 推荐
+* Welcome to submit issue reports and suggestions via Github Issues
+* QQ Group: 779359816 (not full) 758940447 (full)
+* [Gitter](https://gitter.im/xiaomi-dba/soar) Recommended
 
- ![xiaomi_sa](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/xiaomi_sa.png)
-
-## License
-
-[Apache License 2.0](https://github.com/XiaoMi/soar/blob/master/LICENSE).
+Translated with www.DeepL.com/Translator (free version)
