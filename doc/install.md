@@ -50,5 +50,5 @@ The following command can be skipped if you don't have the energy to engage in S
 ## Installation verification
 
 ```bash
-echo 'select * from film' | . /soar
+echo 'select * from film' | ./soar
 ```

@@ -1,9 +1,9 @@
-# 支持的报告类型
+# Supported Report Types
 
 [toc]
 
 ## lint
-* **Description**:参考sqlint格式，以插件形式集成到代码编辑器，显示输出更加友好
+* **Description**:Reference sqlint format, integrated into the code editor as a plugin, displaying output more friendly
 
 * **Example**:
 
@@ -11,7 +11,7 @@
 soar -report-type lint -query test.sql
 ```
 ## markdown
-* **Description**:该格式为默认输出格式，以markdown格式展现，可以用网页浏览器插件直接打开，也可以用markdown编辑器打开
+* **Description**:This format is the default output format, presented in markdown format, which can be opened directly with the web browser plugin, or with a markdown editor
 
 * **Example**:
 
@@ -19,7 +19,7 @@ soar -report-type lint -query test.sql
 echo "select * from film" | soar
 ```
 ## rewrite
-* **Description**:SQL重写功能，配合-rewrite-rules参数一起使用，可以通过-list-rewrite-rules 查看所有支持的 SQL 重写规则
+* **Description**:SQL rewrite function, use with -rewrite-rules parameter, you can see all supported SQL rewrite rules with -list-rewrite-rules
 
 * **Example**:
 
@@ -27,7 +27,7 @@ echo "select * from film" | soar
 echo "select * from film" | soar -rewrite-rules star2columns,delimiter -report-type rewrite
 ```
 ## ast
-* **Description**:输出 SQL 的抽象语法树，主要用于测试
+* **Description**:Outputs an abstract syntax tree of SQL, mainly for testing
 
 * **Example**:
 
@@ -35,7 +35,7 @@ echo "select * from film" | soar -rewrite-rules star2columns,delimiter -report-t
 echo "select * from film" | soar -report-type ast
 ```
 ## ast-json
-* **Description**:以 JSON 格式输出 SQL 的抽象语法树，主要用于测试
+* **Description**:Outputs an abstract syntax tree of SQL in JSON format, mainly for testing
 
 * **Example**:
 
@@ -43,7 +43,7 @@ echo "select * from film" | soar -report-type ast
 echo "select * from film" | soar -report-type ast-json
 ```
 ## tiast
-* **Description**:输出 SQL 的 TiDB抽象语法树，主要用于测试
+* **Description**:Outputs the TiDB abstract syntax tree for SQL, mainly for testing
 
 * **Example**:
 
@@ -51,7 +51,7 @@ echo "select * from film" | soar -report-type ast-json
 echo "select * from film" | soar -report-type tiast
 ```
 ## tiast-json
-* **Description**:以 JSON 格式输出 SQL 的 TiDB抽象语法树，主要用于测试
+* **Description**:TiDB abstract syntax tree for exporting SQL in JSON format, mainly for testing
 
 * **Example**:
 
@@ -59,7 +59,7 @@ echo "select * from film" | soar -report-type tiast
 echo "select * from film" | soar -report-type tiast-json
 ```
 ## tables
-* **Description**:以 JSON 格式输出 SQL 使用的库表名
+* **Description**:Export the name of the library table used by SQL in JSON format
 
 * **Example**:
 
@@ -67,7 +67,7 @@ echo "select * from film" | soar -report-type tiast-json
 echo "select * from film" | soar -report-type tables
 ```
 ## query-type
-* **Description**:SQL 语句的请求类型
+* **Description**:The request type of the SQL statement
 
 * **Example**:
 
@@ -75,7 +75,7 @@ echo "select * from film" | soar -report-type tables
 echo "select * from film" | soar -report-type query-type
 ```
 ## fingerprint
-* **Description**:输出SQL的指纹
+* **Description**:Output fingerprint of SQL
 
 * **Example**:
 
@@ -83,7 +83,7 @@ echo "select * from film" | soar -report-type query-type
 echo "select * from film where language_id=1" | soar -report-type fingerprint
 ```
 ## md2html
-* **Description**:markdown 格式转 html 格式小工具
+* **Description**:markdown format to html format widget
 
 * **Example**:
 
@@ -91,21 +91,21 @@ echo "select * from film where language_id=1" | soar -report-type fingerprint
 soar -list-heuristic-rules | soar -report-type md2html > heuristic_rules.html
 ```
 ## explain-digest
-* **Description**:输入为EXPLAIN的表格，JSON 或 Vertical格式，对其进行分析，给出分析结果
+* **Description**:Enter a table in EXPLAIN, JSON or Vertical format, analyze it, and give the results
 
 * **Example**:
 
 ```bash
 soar -report-type explain-digest << EOF
 +----+-------------+-------+------+---------------+------+---------+------+------+-------+
-| id | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra |
+| id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra |
 +----+-------------+-------+------+---------------+------+---------+------+------+-------+
-|  1 | SIMPLE      | film  | ALL  | NULL          | NULL | NULL    | NULL | 1131 |       |
+| 1 | SIMPLE | film | ALL | NULL | NULL | NULL | NULL | 1131 | |
 +----+-------------+-------+------+---------------+------+---------+------+------+-------+
 EOF
 ```
 ## duplicate-key-checker
-* **Description**:对 OnlineDsn 中指定的 database 进行索引重复检查
+* **Description**:Index duplicate checker for the specified database in OnlineDsn
 
 * **Example**:
 
@@ -113,7 +113,7 @@ EOF
 soar -report-type duplicate-key-checker -online-dsn user:password@127.0.0.1:3306/db
 ```
 ## html
-* **Description**:以HTML格式输出报表
+* **Description**:Export reports in HTML format
 
 * **Example**:
 
@@ -121,7 +121,7 @@ soar -report-type duplicate-key-checker -online-dsn user:password@127.0.0.1:3306
 echo "select * from film" | soar -report-type html
 ```
 ## json
-* **Description**:输出JSON格式报表，方便应用程序处理
+* **Description**:Output JSON format report, easy for application to handle
 
 * **Example**:
 
@@ -129,7 +129,7 @@ echo "select * from film" | soar -report-type html
 echo "select * from film" | soar -report-type json
 ```
 ## tokenize
-* **Description**:对SQL进行切词，主要用于测试
+* **Description**:cut words to SQL, mainly for testing
 
 * **Example**:
 
@@ -137,7 +137,7 @@ echo "select * from film" | soar -report-type json
 echo "select * from film" | soar -report-type tokenize
 ```
 ## compress
-* **Description**:SQL压缩小工具，使用内置SQL压缩逻辑，测试中的功能
+* **Description**:SQL compression widget, using built-in SQL compression logic, feature under test
 
 * **Example**:
 
@@ -148,7 +148,7 @@ from
   film" | soar -report-type compress
 ```
 ## pretty
-* **Description**:使用kr/pretty打印报告，主要用于测试
+* **Description**:Use kr/pretty to print reports, mainly for testing
 
 * **Example**:
 
@@ -156,7 +156,7 @@ from
 echo "select * from film" | soar -report-type pretty
 ```
 ## remove-comment
-* **Description**:去除SQL语句中的注释，支持单行多行注释的去除
+* **Description**:Remove comments from SQL statements, supports single line and multi-line comment removal
 
 * **Example**:
 
@@ -164,10 +164,10 @@ echo "select * from film" | soar -report-type pretty
 echo "select/*comment*/ * from film" | soar -report-type remove-comment
 ```
 ## chardet
-* **Description**:猜测输入的 SQL 使用的字符集
+* **Description**:Guess the character set used by the input SQL
 
 * **Example**:
 
 ```bash
-echo '中文' | soar -report-type chardet
+echo 'Chinese' | soar -report-type chardet
 ```
