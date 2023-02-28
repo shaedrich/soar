@@ -23,7 +23,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/XiaoMi/soar/common"
+	"github.com/yassineim/soar/common"
 
 	"github.com/kr/pretty"
 	"vitess.io/vitess/go/vt/sqlparser"

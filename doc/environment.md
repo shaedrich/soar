@@ -1,6 +1,6 @@
 ## 集成环境
 
-![集成环境](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/env.png)
+![集成环境](https://raw.githubusercontent.com/yassineim/soar/master/doc/images/env.png)
 
 | 线上环境 | 测试环境 |   场景                          |
 | ---      | ---      | ---                             |

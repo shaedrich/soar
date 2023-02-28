@@ -1,12 +1,12 @@
-# ![SOAR](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/logo.png)
+# ![SOAR](https://raw.githubusercontent.com/yassineim/soar/master/doc/images/logo.png)
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xiaomi-dba/soar)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://github.com/XiaoMi/soar/blob/master/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/XiaoMi/soar)](https://goreportcard.com/report/github.com/XiaoMi/soar)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://github.com/yassineim/soar/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/yassineim/soar)](https://goreportcard.com/report/github.com/yassineim/soar)
 [![Build Status](https://travis-ci.org/XiaoMi/soar.svg?branch=master)](https://travis-ci.org/XiaoMi/soar)
-[![GoDoc](https://godoc.org/github.com/XiaoMi/soar?status.svg)](https://godoc.org/github.com/XiaoMi/soar)
+[![GoDoc](https://godoc.org/github.com/yassineim/soar?status.svg)](https://godoc.org/github.com/yassineim/soar)
 
-[文档](http://github.com/XiaoMi/soar/tree/master/doc) | [FAQ](http://github.com/XiaoMi/soar/blob/master/doc/FAQ.md) | [变更记录](http://github.com/XiaoMi/soar/blob/master/CHANGES.md) | [路线图](http://github.com/XiaoMi/soar/blob/master/doc/roadmap.md) | [English](http://github.com/XiaoMi/soar/blob/master/README_EN.md)
+[文档](http://github.com/yassineim/soar/tree/master/doc) | [FAQ](http://github.com/yassineim/soar/blob/master/doc/FAQ.md) | [变更记录](http://github.com/yassineim/soar/blob/master/CHANGES.md) | [路线图](http://github.com/yassineim/soar/blob/master/doc/roadmap.md) | [English](http://github.com/yassineim/soar/blob/master/README_EN.md)
 
 
 ## SOAR
@@ -26,12 +26,12 @@ SOAR (SQL Optimizer And Rewriter) is an automated tool for optimizing and rewrit
 
 ## Quick Start
 
-* [Installation and Use](http://github.com/XiaoMi/soar/blob/master/doc/install.md)
-* [Architecture](http://github.com/XiaoMi/soar/blob/master/doc/structure.md)
-* [Configuration Files](http://github.com/XiaoMi/soar/blob/master/doc/config.md)
-* [Common Commands](http://github.com/XiaoMi/soar/blob/master/doc/cheatsheet.md)
-* [Product Comparison](http://github.com/XiaoMi/soar/blob/master/doc/comparison.md)
-* [Roadmap](http://github.com/XiaoMi/soar/blob/master/doc/roadmap.md)
+* [Installation and Use](http://github.com/yassineim/soar/blob/master/doc/install.md)
+* [Architecture](http://github.com/yassineim/soar/blob/master/doc/structure.md)
+* [Configuration Files](http://github.com/yassineim/soar/blob/master/doc/config.md)
+* [Common Commands](http://github.com/yassineim/soar/blob/master/doc/cheatsheet.md)
+* [Product Comparison](http://github.com/yassineim/soar/blob/master/doc/comparison.md)
+* [Roadmap](http://github.com/yassineim/soar/blob/master/doc/roadmap.md)
 
 ## Communication and Feedback
 

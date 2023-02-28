@@ -21,9 +21,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/XiaoMi/soar/ast"
-	"github.com/XiaoMi/soar/common"
-	"github.com/XiaoMi/soar/database"
+	"github.com/yassineim/soar/ast"
+	"github.com/yassineim/soar/common"
+	"github.com/yassineim/soar/database"
 
 	"github.com/dchest/uniuri"
 	"vitess.io/vitess/go/vt/sqlparser"

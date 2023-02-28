@@ -19,7 +19,7 @@ VERSION_COMPILE := $(shell date +"%F %T %z") by $(shell go version)
 VERSION_BRANCH  := $(shell git rev-parse --abbrev-ref HEAD)
 VERSION_GIT_DIRTY := $(shell git diff --no-ext-diff 2>/dev/null | wc -l | awk '{print $1}')
 VERSION_DEV_PATH:= $(shell pwd)
-LDFLAGS=-ldflags="-s -w -X 'github.com/XiaoMi/soar/common.Version=$(VERSION_VERSION)' -X 'github.com/XiaoMi/soar/common.Compile=$(VERSION_COMPILE)' -X 'github.com/XiaoMi/soar/common.Branch=$(VERSION_BRANCH)' -X 'github.com/XiaoMi/soar/common.GitDirty=$(VERSION_GIT_DIRTY)' -X 'github.com/XiaoMi/soar/common.DevPath=$(VERSION_DEV_PATH)'"
+LDFLAGS=-ldflags="-s -w -X 'github.com/yassineim/soar/common.Version=$(VERSION_VERSION)' -X 'github.com/yassineim/soar/common.Compile=$(VERSION_COMPILE)' -X 'github.com/yassineim/soar/common.Branch=$(VERSION_BRANCH)' -X 'github.com/yassineim/soar/common.GitDirty=$(VERSION_GIT_DIRTY)' -X 'github.com/yassineim/soar/common.DevPath=$(VERSION_DEV_PATH)'"
 
 # These are the values we want to pass for VERSION  and BUILD
 BUILD_TIME=`date +%Y%m%d%H%M`
@@ -139,8 +139,8 @@ doc: build
 .PHONY: heuristic
 heuristic: doc
 	@echo "$(CGREEN)Update Heuristic rule golden files ...$(CEND)"
-	go test github.com/XiaoMi/soar/advisor -v -update -run TestListHeuristicRules
-	go test github.com/XiaoMi/soar/advisor -v -update -run TestMergeConflictHeuristicRules
+	go test github.com/yassineim/soar/advisor -v -update -run TestListHeuristicRules
+	go test github.com/yassineim/soar/advisor -v -update -run TestMergeConflictHeuristicRules
 	docker stop soar-mysql 2>/dev/null || true
 
 # Update all vendor

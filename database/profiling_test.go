@@ -19,7 +19,7 @@ package database
 import (
 	"testing"
 
-	"github.com/XiaoMi/soar/common"
+	"github.com/yassineim/soar/common"
 
 	"github.com/kr/pretty"
 )

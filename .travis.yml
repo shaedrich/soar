@@ -6,7 +6,7 @@ go:
 
 sudo: required
 
-go_import_path: github.com/XiaoMi/soar
+go_import_path: github.com/yassineim/soar
 
 dist: xenial
 

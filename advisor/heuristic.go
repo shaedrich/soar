@@ -24,9 +24,9 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/XiaoMi/soar/ast"
-	"github.com/XiaoMi/soar/common"
-	"github.com/XiaoMi/soar/database"
+	"github.com/yassineim/soar/ast"
+	"github.com/yassineim/soar/common"
+	"github.com/yassineim/soar/database"
 
 	"github.com/gedex/inflector"
 	"github.com/percona/go-mysql/query"
@@ -2031,7 +2031,7 @@ func (q *Query4Audit) RuleCountConst() Rule {
 func (q *Query4Audit) RuleSumNPE() Rule {
 	var rule = q.RuleOK()
 	fingerprint := query.Fingerprint(q.Query)
-	// TODO: https://github.com/XiaoMi/soar/issues/143
+	// TODO: https://github.com/yassineim/soar/issues/143
 	// https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html
 	sumReg := regexp.MustCompile(`(?i)sum\(\s*[0-9a-z?]*\s*\)`)
 	isnullReg := regexp.MustCompile(`(?i)isnull\(sum\(\s*[0-9a-z?]*\s*\)\)`)

@@ -13,7 +13,7 @@
 
 官方不会提供 Web 界面支持，但社区已经有相当多的同学基于 SOAR 开发了衍生的 Web 平台。可以参考如下 ISSUE 的讨论。
 
-> https://github.com/XiaoMi/soar/issues/51
+> https://github.com/yassineim/soar/issues/51
 
 ## 命令行参数 `test-dsn`, `online-dsn` 中包含特殊字符怎么办？
 
@@ -27,11 +27,11 @@ SOAR是命令行工具，开源版本无UI界面需要在 `cmd.exe` 下运行。
 
 ## Windows 环境下 -query 文件找不到问题
 
-![](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/windows_query_error.png)
+![](https://raw.githubusercontent.com/yassineim/soar/master/doc/images/windows_query_error.png)
 
 将 Window 文件后缀名显示打开，并检查文件名是否正确。
 
-![](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/windows_query_check.png)
+![](https://raw.githubusercontent.com/yassineim/soar/master/doc/images/windows_query_check.png)
 
 ## Windows环境下双击`soar.windows-amd64`文件无反应。
 
@@ -39,7 +39,7 @@ SOAR是命令行工具，开源版本无UI界面需要在 `cmd.exe` 下运行。
 
 ## Windows 用户的引号问题
 
-![windows_quote](https://raw.githubusercontent.com/XiaoMi/soar/master/doc/images/windows_quote.png)
+![windows_quote](https://raw.githubusercontent.com/yassineim/soar/master/doc/images/windows_quote.png)
 
 从上图可以看出 Windows 环境下引号（单引号或双引号）也成为了SQL的一部分传递给 soar 进行分析。因此 Windows 环境下使用如下方式读取 SQL 来解决 Windows 的引号问题。
 
