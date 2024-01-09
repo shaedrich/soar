@@ -305,18 +305,18 @@ var ExplainSelectType = map[string]string{
 
 // ExplainAccessType EXPLAIN中ACCESS TYPE会出现的类型
 var ExplainAccessType = map[string]string{
-	"system":          "这是const连接类型的一种特例, 该表仅有一行数据(=系统表).",
-	"const":           `const用于使用常数值比较PRIMARY KEY时, 当查询的表仅有一行时, 使用system. 例:SELECT * FROM tbl WHERE col = 1.`,
-	"eq_ref":          `除const类型外最好的可能实现的连接类型. 它用在一个索引的所有部分被连接使用并且索引是UNIQUE或PRIMARY KEY, 对于每个索引键, 表中只有一条记录与之匹配. 例: 'SELECT * FROM RefTbl, tbl WHERE RefTbl.col=tbl.col;'.`,
-	"ref":             `连接不能基于关键字选择单个行, 可能查找到多个符合条件的行. 叫做ref是因为索引要跟某个参考值相比较. 这个参考值或者是一个数, 或者是来自一个表里的多表查询的结果值. 例:'SELECT * FROM tbl WHERE idx_col=expr;'.`,
-	"fulltext":        "查询时使用 FULLTEXT 索引.",
-	"ref_or_null":     "如同ref, 但是MySQL必须在初次查找的结果里找出null条目, 然后进行二次查找.",
-	"index_merge":     `表示使用了索引合并优化方法. 在这种情况下. key列包含了使用的索引的清单, key_len包含了使用的索引的最长的关键元素. 详情请见 8.2.1.4, “Index Merge Optimization”.`,
-	"unique_subquery": `在某些IN查询中使用此种类型，而不是常规的ref:'value IN (SELECT PrimaryKey FROM SingleTable WHERE SomeExpr)'.`,
-	"index_subquery":  "在某些IN查询中使用此种类型, 与 unique_subquery 类似, 但是查询的是非唯一索引性索引.",
-	"range":           `只检索给定范围的行, 使用一个索引来选择行. key列显示使用了哪个索引. key_len包含所使用索引的最长关键元素.`,
-	"index":           "全表扫描, 只是扫描表的时候按照索引次序进行而不是行. 主要优点就是避免了排序, 但是开销仍然非常大.",
-	"ALL":             `最坏的情况, 从头到尾全表扫描.`,
+	"system":          "This is a special case of the const join type, where the table has only one row of data (= system table).",
+	"const":           `const is used to compare PRIMARY KEYs with constant values, and system is used when the query has only one row. Example: SELECT * FROM tbl WHERE col = 1.`,
+	"eq_ref":          `The best possible implementation of a join type other than const. It is used when all parts of an index are joined and the index is a UNIQUE or PRIMARY KEY, so that for each index key, there is only one row in the table that matches it. Example: 'SELECT * FROM RefTbl, tbl WHERE RefTbl.col=tbl.col;'.`,
+	"ref":             `A join cannot select a single row based on a keyword, it may find more than one row that matches the criteria. It is called a ref because the index is compared to a reference value. This reference is either a number, or the result of a multi-table query from a single table. Example: 'SELECT * FROM tbl WHERE idx_col=expr;'.`,
+	"fulltext":        "The query uses the FULLTEXT index.",
+	"ref_or_null":     "Like ref, but MySQL must find the null entry in the result of the first lookup, and then do a second lookup.",
+	"index_merge":     `Indicates that an index merge optimization method was used. The key column contains a list of the indexes used, and key_len contains the longest key element of the indexes used. See 8.2.1.4, "Index Merge Optimization" for details.`,
+	"unique_subquery": `Use this type in some IN queries instead of the regular ref: 'value IN (SELECT PrimaryKey FROM SingleTable WHERE SomeExpr)'.`,
+	"index_subquery":  "This type is used in some IN queries, similar to unique_subquery, but for non-unique indexes.",
+	"range":           `Retrieves only a given range of rows, using an index to select the rows. The key column shows which index was used. key_len contains the longest key element of the index used.`,
+	"index":           "A full table scan, where the table is scanned in index order instead of rows. The main advantage is that it avoids sorting, but the overhead is still very high.",
+	"ALL":             `Worst case scenario, full table scan from top to bottom.`,
 }
 
 // ExplainScalability ACCESS TYPE对应的运算复杂度 [AccessType]scalability map
