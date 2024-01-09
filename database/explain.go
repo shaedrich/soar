@@ -290,17 +290,17 @@ var ExplainColumnIndent = map[string]string{
 
 // ExplainSelectType EXPLAIN中SELECT TYPE会出现的类型
 var ExplainSelectType = map[string]string{
-	"SIMPLE":               "简单SELECT(不使用UNION或子查询等).",
-	"PRIMARY":              "最外层的select.",
-	"UNION":                "UNION中的第二个或后面的SELECT查询, 不依赖于外部查询的结果集.",
-	"DEPENDENT":            "UNION中的第二个或后面的SELECT查询, 依赖于外部查询的结果集.",
-	"UNION RESULT":         "UNION查询的结果集.",
-	"SUBQUERY":             "子查询中的第一个SELECT查询, 不依赖于外部查询的结果集.",
-	"DEPENDENT SUBQUERY":   "子查询中的第一个SELECT查询, 依赖于外部查询的结果集.",
-	"DERIVED":              "用于from子句里有子查询的情况. MySQL会递归执行这些子查询, 把结果放在临时表里.",
+	"SIMPLE":               "Simple SELECT (no UNION or subqueries, etc.).",
+	"PRIMARY":              "Outermost select.",
+	"UNION":                "The second or subsequent SELECT queries in a UNION do not depend on the result set of the outer query.",
+	"DEPENDENT":            "The second or subsequent SELECT queries in a UNION depend on the result set of the outer query.",
+	"UNION RESULT":         "The result set of a UNION query.",
+	"SUBQUERY":             "The first SELECT query in the subquery, which does not depend on the result set of the outer query.",
+	"DEPENDENT SUBQUERY":   "The first SELECT query in the subquery, which depends on the result set of the outer query.",
+	"DERIVED":              "Used when there are subqueries in the from clause. MySQL executes these subqueries recursively, placing the results in a temporary table.",
 	"MATERIALIZED":         "Materialized subquery.",
-	"UNCACHEABLE SUBQUERY": "结果集不能被缓存的子查询, 必须重新为外层查询的每一行进行评估.",
-	"UNCACHEABLE UNION":    "UNION中的第二个或后面的select查询, 属于不可缓存的子查询（类似于UNCACHEABLE SUBQUERY）.",
+	"UNCACHEABLE SUBQUERY": "Subqueries whose result sets cannot be cached must be reevaluated for each row of the outer query.",
+	"UNCACHEABLE UNION":    "The second or subsequent select query in a UNION is a non-cacheable subquery (similar to an UNCACHEABLE SUBQUERY).",
 }
 
 // ExplainAccessType EXPLAIN中ACCESS TYPE会出现的类型
